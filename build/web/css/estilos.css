@@ -1,0 +1,67 @@
+body{
+    background-image: url(../imagenes/fondopagina.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+}
+
+.menu{
+    padding: 15px;
+    text-align: right;
+    border-style: none none solid none;
+    border-color: white;
+    background-color: black;
+    background: rgba(25,25,112,0.6);
+}
+
+.menu ul li a{
+    text-decoration: none;
+    padding: 5px;
+    color: white;
+}
+
+.menu ul li {
+    font-size: 20px;
+    font-family: Arial, Geneva, Helvetica, sans-serif;
+    list-style: none;
+    display: inline-block;
+    padding: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: darkorange;
+    transition: all .3s;
+}
+
+.menu ul li:hover{
+    color: darkslategray;
+    transition: all .3s;
+    box-shadow: 1px 1px 1px 1px darkorange;
+    background-color: rgb(255,165,0);
+    transform: translate(-2px,0px);
+}
+
+.menu ul li a:hover{
+    color: darkslategray;
+}
+
+.piedepagina{
+    color: white;
+    font-family: Arial, Geneva, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 2px;
+    background: rgba(0,0,0,0.8);
+    border-style: solid none none none;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 0 0 20px 20px;
+    box-sizing: border-box;
+}
+
+.logo{
+    width: 145px;
+    height: 142px;
+}
+

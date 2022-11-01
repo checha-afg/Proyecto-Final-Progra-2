@@ -1,0 +1,46 @@
+.cuerpoFormulario{
+    margin: 60px 35%;
+}
+
+.formularioAlta{
+    background: rgba(0,0,0,0.8);
+    padding: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-family: Arial, Geneva, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+.btn{
+    /*padding: 10px 20px 10px 20px;*/
+    
+    padding: 5px 10px 5px 10px;
+    font-family: Arial, Geneva, Helvetica, sans-serif;
+    background-color: rgb(0,128,128);
+    font-weight: bold; 
+    color: white;
+    font-size: 20px;
+}
+
+.btn:hover{
+    transition: all .3s;
+    color: darkslategray;
+    background-color: rgb(0,206,209);
+    transform: translate(0px,-2px);
+    color: white;
+    font-size: 20px;
+}
+
+.txt{
+    font-size: 22px;
+    
+}
+.Boton_44{
+      justify-items: center; 
+    flex-direction:row;
+    grid-column: span 2;
+    display: table-cell; 
+    width: 100%; 
+    height: 100%; 
+    text-align: center;
+}

@@ -1,0 +1,507 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 2px;
+}
+.contenedor {
+    width: auto;
+    margin: 2px auto;
+    font-family: "Raleway", sans-serif;
+}
+
+.MA1{
+    width: 455px;
+    float: left;
+
+    font-family: raleway;
+    background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+
+}
+
+.MA2{
+    width: 860px;
+    float: right;
+    border-radius: 5px;
+    font-family: raleway;
+    border: 4px solid #00ff00;
+    padding: 4px;
+}
+
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+    background-color: #7fffd4;
+}
+
+.formulario__label {
+    cursor: pointer;
+    font-style: oblique;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    margin-left: 28px;
+}
+
+.formulario__grupo-input {
+    position: relative;
+}
+
+.formulario__input {
+    width: 100%;
+    background: white;
+    border:slategray solid 2px;
+    border-radius: 3px;
+    height: 25px;
+    line-height: 37px;
+    transition: 0.3s ease all;
+    font-size: 11px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.formulario__input:focus {
+    border: 3px dodgerblue solid;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(20, 69, 202, 0.4);
+}
+
+.formulario_pre {
+    text-align: center;
+    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-weight: bold;
+}
+.parent {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    border-radius: 4px;
+    padding: 4px;
+
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 3 / 2 / 6; }
+.div3 { grid-area: 2 / 3 / 3 / 6; }
+.div4 { grid-area: 1 / 7 / 2 / 6; }
+.div5 { grid-area: 4 / 1 / 5 / 2; }
+.div6 { grid-area: 4 / 2 / 5 / 3; }
+.div7 { grid-area: 5 / 1 / 6 / 3; }
+.div8 { grid-area: 4 / 5 / 5 / 8; }
+img{
+    width:120px;
+    height:40px;
+}
+.div2 {
+    position: relative;
+    width: 200px;
+
+}
+
+.div3 {
+    position: relative;
+    width: 200px;
+
+}
+
+.div4 {
+    position: relative;
+    width: 100px;
+
+}
+
+.div5 {
+    position: relative;
+    width: 110px;
+}
+
+.div6 {
+    position: relative;
+}
+
+.div7 {
+    padding-top: 10px;
+    position: relative;
+    width: 200px;
+}
+
+.div8 {
+    position: relative;
+    width: 230px;
+
+}
+.orden{
+    width: auto;
+    float: right;
+}
+
+.casa26{
+    background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+    width: 660px;
+    float: right;
+    border-radius: 5px;
+    font-family: raleway;
+
+    padding: 4px;
+}
+
+.formula_tabla{
+    background-color: honeydew;
+    font-size: 14px;
+}
+
+.formulario__grupo-btn-enviar {
+    justify-items: center; 
+
+    /*    flex-direction:row;
+        grid-column: span 2;
+        display: table-cell; 
+    */
+    width: 50%; 
+    height: 50%; 
+    text-align: center;
+}
+
+
+.formulario__btn {
+    height: 50px;
+    width: 100%; 
+    background: rgb(38,171,171);
+    background: linear-gradient(0deg, rgba(38,171,171,1) 0%, rgba(23,244,209,1) 100%);
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 17px;
+    border: 2px solid #00bfff; 	
+    border-radius:18px;
+    cursor: pointer;
+    transition: .1s ease all;
+
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.blanco{
+    padding-top: 27px;
+
+}
+
+.nekros {
+
+    width: 130px;
+    height: 40px;
+    background: linear-gradient(90deg, rgba(49,224,237,1) 0%, rgba(65,168,217,1) 35%, rgba(54,186,218,1) 100%); 
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    border-bottom: 4px solid #2b8bc6;
+    color: #fbfbfb;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.4);
+    font-size: 16px;
+    text-align: left;
+    text-indent: 5px;
+    box-shadow: 0px 3px 0px 0px rgba(0,0,0,.5);
+    cursor: pointer;
+
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    margin-left: 30px;
+}
+
+
+.nekros:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 20px solid #187dbc;
+    border-bottom: 20px solid #187dbc;
+    border-left: 16px solid transparent;
+    border-right: 20px solid #187dbc;
+    position: absolute;
+    opacity: 0.6; 
+    right: 0;
+    top: 0;
+    border-radius: 0 5px 5px 0;  
+}
+
+.nekros_verde {
+
+    width: 120px;
+    height: 40px;
+    background: linear-gradient(90deg, rgba(94,240,101,1) 0%, rgba(42,251,10,1) 35%, rgba(153,245,114,1) 100%);    border: none;
+    border-radius: 5px;
+    position: relative;
+    border-bottom: 4px solid limegreen;
+    color: #fbfbfb;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.4);
+    font-size: 17px;
+    text-align: left;
+    text-indent: 5px;
+    box-shadow: 0px 3px 0px 0px rgba(0,0,0,.5);
+    cursor: pointer;
+
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    margin-left: 140px;
+}
+
+
+.nekros_verde:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 20px solid forestgreen;
+    border-bottom: 20px solid forestgreen;
+    border-left: 16px solid transparent;
+    border-right: 20px solid forestgreen;
+    position: absolute;
+    opacity: 0.6; 
+    right: 0;
+    top: 0;
+    border-radius: 0 5px 5px 0;  
+}
+
+.nekros_rojo {
+    width: 120px;
+    height: 40px;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    border-bottom: 4px solid crimson;
+    color: #fbfbfb;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.4);
+    font-size: 17px;
+    text-align: left;
+    text-indent: 5px;
+    box-shadow: 0px 3px 0px 0px rgba(0,0,0,.5);
+    cursor: pointer;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+
+.nekros_rojo:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 20px solid crimson;
+    border-bottom: 20px solid crimson;
+    border-left: 16px solid transparent;
+    border-right: 20px solid crimson;
+    position: absolute;
+    opacity: 0.6; 
+    right: 0;
+    top: 0;
+    border-radius: 0 5px 5px 0;  
+}
+.titulo{
+    font-weight:bolder;
+    font-family:"Times New Roman", Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+
+.producto_input {
+    width: 100%;
+    background: white;
+    border: slategray solid 2px;
+    border-radius: 3px;
+    height: 25px;
+    line-height: 37px;
+
+    font-size: 11px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    margin-left: 30px;
+}
+
+.parent2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.div_uno { grid-area: 1 / 1 / 2 / 2; }
+.div_dos { grid-area: 2 / 1 / 3 / 2; }
+.div_tres { grid-area: 2 / 2 / 3 / 3; }
+.div_cuatro { grid-area: 3 / 1 / 4 / 2; }
+.div_cinco { grid-area: 3 / 2 / 4 / 4; }
+.div_seis { grid-area: 1 / 3 / 2 / 4; }
+
+.div_cinco{
+    margin-left: 40px;
+    width: 65%;
+}
+
+.div_tres{
+    margin-left: 40px;  
+}
+
+.titulos{
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+}
+
+.nekros_amarillo {
+    width: 120px;
+    height: 40px;
+    background: linear-gradient(90deg, rgba(244,249,45,1) 0%, rgba(221,231,8,1) 50%, rgba(248,249,39,1) 100%);
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    border-bottom: 4px solid goldenrod;
+    color: #fbfbfb;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.4);
+    font-size: 17px;
+    text-align: left;
+    text-indent: 5px;
+    box-shadow: 0px 3px 0px 0px rgba(0,0,0,.5);
+    cursor: pointer;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+
+.nekros_amarillo:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 20px solid goldenrod;
+    border-bottom: 20px solid goldenrod;
+    border-left: 16px solid transparent;
+    border-right: 20px solid goldenrod;
+    position: absolute;
+    opacity: 0.6; 
+    right: 0;
+    top: 0;
+    border-radius: 0 5px 5px 0;  
+}
+
+
+.formula_modal{
+   
+ background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+.formulario__grupo-btn-enviar {
+    justify-items: center; 
+    flex-direction:row;
+    grid-column: span 2;
+    display: table-cell; 
+    width: 100%; 
+    height: 100%; 
+    text-align: center;
+}
+
+
+.formulario__btn {
+    height: 50px;
+    width: 20%; 
+    background: rgb(38,171,171);
+    background: linear-gradient(0deg, rgba(38,171,171,1) 0%, rgba(23,244,209,1) 100%);
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 17px;
+    border: 2px solid #00bfff; 	
+    border-radius:18px;
+    cursor: pointer;
+    transition: .1s ease all;
+
+}
+.formulario__btn1{
+    height: 50px;
+    width: 20%;
+    background: rgb(3,226,10);
+    background: linear-gradient(0deg, rgba(3,226,10,1) 0%, rgba(83,236,67,1) 100%);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 17px;
+    border: 2px solid #00ff00; 	
+    border-radius: 18px;
+    cursor: pointer;
+    transition: .1s ease all;
+
+}
+
+.formulario__btn2{
+    height: 50px;
+    width: 20%;
+    background: rgb(244,30,30);
+    background: linear-gradient(0deg, rgba(244,30,30,1) 0%, rgba(248,16,16,1) 100%);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 17px;
+    border: 2px solid #ff0000; 
+    border-radius: 18px;
+    cursor: pointer;
+    transition: .1s ease all;
+
+}
+
+.formulario__btn:hover, .formulario__btn1:hover, .formulario__btn2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color:black;
+    font-size: 19px;
+}
+
+
+.radio_ver{
+    background-color: #00ff00;
+}
+
+.mod_salir{
+    width: 15%;
+    background: rgb(248,159,4);
+    background: linear-gradient(0deg, rgba(248,159,4,1) 0%, rgba(248,174,36,1) 100%);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 17px;
+    border: 2px solid orange; 
+    border-radius: 18px;
+    cursor: pointer;
+    transition: .1s ease all;
+}
+
+.btn_form{
+    height: 50px;
+    width: 10%;
+  background:  #20b2aa;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    border: #1ed12d;
+    cursor: pointer;
+    transition: .1s ease all;
+}
+
+.titulos{
+   text-align: center;
+   font-size: 16px;
+}
+
+.btn_falso{
+   visibility: hidden; 
+}
