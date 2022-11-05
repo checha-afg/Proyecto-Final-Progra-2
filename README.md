@@ -1,3 +1,5 @@
 # Proyecto-Final-BIEN
-CORREGIDO XD
-(Falta la app)
+
+La pagina se compila correctamente en Servidores Tomcat 9
+
+Probando conectividad de la App
