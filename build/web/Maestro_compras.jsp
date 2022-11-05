@@ -33,7 +33,7 @@
         
         <div id="header">
             <ul class="nav">
-                <img src="imagenes/onitech.png" alt=""/>
+                <img height="100" src="https://static.wikia.nocookie.net/animalcrossing/images/3/32/Chadder_NH.png" alt="raton"/>
                 <li><a href="index_inicio_principal.jsp">Inicio</a></li>
                 <li><a href="index_producto.jsp">Productos</a>
                     <ul>

@@ -15,7 +15,7 @@
     <body>
         <div id="header">
             <ul class="nav">
-                <img src="https://www.noahandmaeve.co.uk/wp-content/uploads/2022/04/image-43_ccexpress.png" alt=""/>
+                <img height="100" src="https://static.wikia.nocookie.net/animalcrossing/images/3/32/Chadder_NH.png" alt="raton"/>
                 <li><a href="index_inicio_principal.jsp">Inicio</a></li>
                 
                 <li><a href="index_producto.jsp">Productos</a>

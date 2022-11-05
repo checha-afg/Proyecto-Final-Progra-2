@@ -51,7 +51,7 @@ public Puesto(){
         HashMap <String, String> drop = new HashMap();
     try{
         cn = new Conexion();
-        String query=("select Idpuesto as id,Puesto from puestos;");
+        String query=("select idpuestos as id,puesto from puestos;");
         cn.abrir_conexion();
         ResultSet consulta = cn.conexionBD.createStatement().executeQuery(query);
         while(consulta.next()){
@@ -70,7 +70,7 @@ public Puesto(){
         try {
             cn = new Conexion();
             cn.abrir_conexion();
-            String query = "select Idpuesto as id,Puesto from puestos;";
+            String query = "select idpuestos as id,puesto from puestos;";
             ResultSet consulta = cn.conexionBD.createStatement().executeQuery(query);
             String encabezado[] = {"Id", "puesto"};
             tabla.setColumnIdentifiers(encabezado);
@@ -115,7 +115,7 @@ public Puesto(){
         {
             try {
                 PreparedStatement parametro;
-                String query = "update puestos set Puesto=? where Idpuesto=?;";
+                String query = "update puestos set Puesto=? where idpuestos=?;";
                 cn = new Conexion();
                 cn.abrir_conexion();
                 parametro = (PreparedStatement) cn.conexionBD.prepareStatement(query);
@@ -139,7 +139,7 @@ public Puesto(){
         {
             try {
                 PreparedStatement parametro;
-                String query = "delete from puestos where Idpuesto=?;";
+                String query = "delete from puestos where idpuestos=?;";
                 cn = new Conexion();
                 cn.abrir_conexion();
                 parametro = (PreparedStatement) cn.conexionBD.prepareStatement(query);

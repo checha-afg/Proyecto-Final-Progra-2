@@ -36,7 +36,7 @@
     <body>
         <div id="header">
             <ul class="nav">
-                <img src="imagenes/onitech.png" alt=""/>
+                <img src="https://static.wikia.nocookie.net/animalcrossing/images/3/32/Chadder_NH.png/revision/latest?cb=20200321101735" alt="raton"/>
                 <li><a href="index_inicio_principal.jsp">Inicio</a></li>
                 <li><a href="index_producto.jsp">Productos</a>
                     <ul>
@@ -74,7 +74,7 @@
             </ul>
         </div>
 
-        <div class="Unido" class="formulario" >
+        <div class="Unido formulario" >
             <!-- Primer Formulario Para Insertar A ventas -->
             <div class="container-fluid  p-3 my-3  text-black">
 
@@ -162,9 +162,9 @@
 
                                     <div class=" formulario__grupo-btn-enviar">
                                         <button  name="btn_modificar" id="btn_modificar" value="modificar" class="nekros" >Modificar</button>
-                                        <button  name="btn_2" id="btn_2" onclick="return confirmar2();" value="eliminar"class="nekros_rojo" > Eliminar </button>
+                                        <button  name="btn_2" id="btn_2" onclick="return confirmar2();" value="eliminar" class="nekros_rojo" > Eliminar </button>
                                     </div>
-                                    <button name="btn_eliminar" id="btn_eliminar"  value="eliminar"class="btn_falso" >  </button>
+                                    <button name="btn_eliminar" id="btn_eliminar"  value="eliminar" class="btn_falso" >  </button>
                                     <br>
 
                                 </form>  
@@ -462,7 +462,7 @@
                             <div class="formulario__grupo" id="grupo__txt_puesto">
                                 <label for="lbl_puesto" class="formulario__label">Factura:</label>
                                 <div class="formulario__grupo-input">
-                                    <select name="drop_fact" class="formulario__input" id="drop_fact" readonly >
+                                    <select name="drop_fact" class="formulario__input" id="drop_fact">
                                         <%                                    Ventas max_fact = new Ventas();
                                             HashMap<String, String> fact = max_fact.max_fact();
                                             for (String e : fact.keySet()) {
@@ -488,7 +488,7 @@
                             <div class="formulario__grupo " id="grupo__txt_puesto">
                                 <label for="lbl_puesto" class="formulario__label">Clientes:</label>
                                 <div class="formulario__grupo-input">
-                                    <select name="drop_cliente" class="formulario__input" id="drop_cliente" readonly >
+                                    <select name="drop_cliente" class="formulario__input" id="drop_cliente">
                                         <%
                                             Cliente c_cliente2 = new Cliente();
                                             HashMap<String, String> drop55 = c_cliente2.seleccionar();

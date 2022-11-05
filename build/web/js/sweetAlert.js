@@ -1,10 +1,12 @@
+/* global Swal */
+
 function bienvenido(){
 Swal.fire({
     title: "Bienvenido",
-    imageUrl: 'Imagenes/exito.gif',
-    imageWidth: 400,
-    imageHeight: 386,
-    imageAlt: 'Custom image',
+    imageUrl: 'C:\Users\chech\OneDrive\Escritorio\Proyecto Final Progra2\web\Imagenes\hola.gif',
+    imageWidth: 250,
+    imageHeight: 250,
+    imageAlt: 'Bienvenido',
     //icon: "success",
     /*showClass: {
     popup: 'animate__animated animate__fadeInDown'
@@ -33,10 +35,10 @@ function creado(){
 Swal.fire({
     title: "Exito",
     text: 'Usuario creado correctamente',
-    imageUrl: 'Imagenes/exito2.gif',
+    imageUrl: 'Imagenes/registrado.gif',
     imageWidth: 496,
     imageHeight: 278,
-    imageAlt: 'Custom image',
+    imageAlt: 'Registrado',
     //icon: "success",
     showClass: {
     popup: 'animate__animated animate__fadeInDown'
@@ -59,10 +61,10 @@ function error(){
     Swal.fire({
     title: "Error...",
     text: 'Al parecer algo ha salido mal',
-    imageUrl: 'imagenes/error.gif',
-    imageWidth: 400,
-    imageHeight: 400,
-    imageAlt: 'Custom image',
+    imageUrl: 'Imagenes/fallo.gif',
+    imageWidth: 498,
+    imageHeight: 280,
+    imageAlt: 'Error',
     //icon: "error",
     showClass: {
     popup: 'animate__animated animate__fadeInDown'

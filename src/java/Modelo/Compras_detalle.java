@@ -1,4 +1,4 @@
-/*
+    /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -183,7 +183,7 @@ public class Compras_detalle {
             
             retorno=parametro.executeUpdate();
             cn.cerrar_conexion();
-        }catch(Exception ex)
+        }catch(SQLException ex)
         {
             
         }
@@ -206,7 +206,7 @@ public class Compras_detalle {
                 existencias=peticion.getInt(1);
             }
             cn.cerrar_conexion();
-        }catch(Exception ex)
+        }catch(SQLException ex)
         {
             
         }
@@ -272,7 +272,7 @@ public class Compras_detalle {
         {
             cn=new Conexion();
             cn.abrir_conexion();
-            String idprod_de_registro="select idproducto from compras_detalle where idcompra_Detalle=?";
+            String idprod_de_registro="select idproducto from compras_detalle where idcompra_detalle=?";
             PreparedStatement parametros=(PreparedStatement)cn.conexionBD.prepareStatement(idprod_de_registro);
             parametros.setInt(1, getIdcompra_detalle());
             ResultSet peticion=parametros.executeQuery();
@@ -281,7 +281,7 @@ public class Compras_detalle {
                 mayor_idp=peticion.getInt(1);
             }
             cn.cerrar_conexion();
-        }catch(Exception ex)
+        }catch(SQLException ex)
         {
                 
         }
@@ -345,7 +345,7 @@ public class Compras_detalle {
         try
         {
             PreparedStatement parametro;
-            String codigo_sql="delete from db_punto_venta.compras_detalle where idcompra_detalle=?";
+            String codigo_sql="delete from db_proyectofinal.compras_detalle where idcompra_detalle=?";
             cn = new Conexion();
             cn.abrir_conexion();
             parametro=(PreparedStatement) cn.conexionBD.prepareStatement(codigo_sql);
@@ -421,7 +421,7 @@ public class Compras_detalle {
         try
         {
             PreparedStatement parametro;
-            String codigo_sql="update db_punto_venta.productos set precio_costo=?, precio_venta=?, existencia=existencia+? where idproducto=?";
+            String codigo_sql="update db_proyectofinal.productos set precio_costo=?, precio_venta=?, existencia=existencia+? where idproducto=?";
             cn = new Conexion();
             cn.abrir_conexion();
             parametro=(PreparedStatement) cn.conexionBD.prepareStatement(codigo_sql);

@@ -120,7 +120,7 @@ public class Empleado extends Persona {
 
                 String fecha = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime());
                 PreparedStatement parametro;
-                String query = "insert into empleados(Nombres,Apellidos,Direccion,Telefono,DPI,Genero,Fecha_nacimiento,idPuesto,Fecha_inicio_labores,Fechaingreso)values(?,?,?,?,?,?,?,?,?,?);";
+                String query = "insert into empleados(Nombres,Apellidos,Direccion,Telefono,DPI,Genero,Fecha_nacimiento,idpuestos,fecha_inicio_labores,Fechaingreso)values(?,?,?,?,?,?,?,?,?,?);";
                 cn = new Conexion();
                 cn.abrir_conexion();
                 parametro = (PreparedStatement) cn.conexionBD.prepareStatement(query);
@@ -154,7 +154,7 @@ public class Empleado extends Persona {
         try {
             cn = new Conexion();
             cn.abrir_conexion();
-            String query = "select idEmpleado as id, m.Nombres, m.Apellidos, m.Direccion, m.Telefono,m.DPI,m.Genero,m.Fecha_nacimiento,m.Fecha_inicio_labores,m.Fechaingreso, P.Puesto, P.Idpuesto from empleados as m, puestos as P where m.idPuesto=P.Idpuesto;";
+            String query = "select idempleado as id, m.Nombres, m.Apellidos, m.Direccion, m.Telefono,m.DPI,m.Genero,m.Fecha_nacimiento,m.Fecha_inicio_labores,m.Fechaingreso, P.Puesto, P.Idpuestos from empleados as m, puestos as P where m.idpuestos=P.idpuestos;";
             ResultSet consulta = cn.conexionBD.createStatement().executeQuery(query);
             String encabezado[] = {"Id", "Nombres", "Apellidos", "Direccion", "Telefono", "Dpi", "Genero", "Nacimiento", "Fecha Contrato", "Fecha Ingreso", "Puesto", "id_puesto"};
             tabla.setColumnIdentifiers(encabezado);
@@ -178,7 +178,7 @@ public class Empleado extends Persona {
                 datos[8] = consulta.getString("Fecha_inicio_labores");
                 datos[9] = consulta.getString("Fechaingreso");
                 datos[10] = consulta.getString("Puesto");
-                datos[11] = consulta.getString("Idpuesto");
+                datos[11] = consulta.getString("idpuestos");
 
                 tabla.addRow(datos);
             }
@@ -194,7 +194,7 @@ public class Empleado extends Persona {
         HashMap <String, String> drop = new HashMap();
     try{
         cn = new Conexion();
-        String query=("select idEmpleado as id, m.Nombres, m.Apellidos  from empleados as m, puestos as P where m.idPuesto=P.Idpuesto;");
+        String query=("select idEmpleado as id, m.Nombres, m.Apellidos  from empleados as m, puestos as P where m.idPuestos=P.Idpuestos;");
         cn.abrir_conexion();
         ResultSet consulta = cn.conexionBD.createStatement().executeQuery(query);
         while(consulta.next()){
@@ -211,7 +211,7 @@ public class Empleado extends Persona {
         HashMap <String, String> drop = new HashMap();
     try{
         cn = new Conexion();
-        String query=("select idEmpleado as id, m.Nombres, m.Apellidos,P.Puesto from empleados as m, puestos as P where m.idPuesto=P.Idpuesto;");
+        String query=("select idEmpleado as id, m.Nombres, m.Apellidos,P.Puesto from empleados as m, puestos as P where m.idPuestos=P.Idpuestos;");
         cn.abrir_conexion();
         ResultSet consulta = cn.conexionBD.createStatement().executeQuery(query);
         while(consulta.next()){
@@ -231,7 +231,7 @@ public class Empleado extends Persona {
         {
             try {
                 PreparedStatement parametro;
-                String query = "update empleados set Nombres=?, Apellidos=?,Direccion=?,Telefono=?,DPI=?,Genero=?, Fecha_nacimiento=?,idPuesto=?, Fecha_inicio_labores=? where idEmpleado=?;";
+                String query = "update empleados set Nombres=?, Apellidos=?,Direccion=?,Telefono=?,DPI=?,Genero=?, Fecha_nacimiento=?,idPuestos=?, Fecha_inicio_labores=? where idEmpleado=?;";
                 cn = new Conexion();
                 cn.abrir_conexion();
                 parametro = (PreparedStatement) cn.conexionBD.prepareStatement(query);
