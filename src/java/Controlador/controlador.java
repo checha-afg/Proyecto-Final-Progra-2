@@ -1,19 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Controlador;
 
 import Modelo.Marcas;
 import Modelo.Producto;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  *
@@ -45,7 +39,7 @@ public class controlador extends HttpServlet {
             //out.println("<h1>Servlet controlador at " + request.getContextPath() + "</h1>");
             
             //FORMULARIO PRODUCTO
-            producto= new Producto(request.getParameter("txt_producto"),request.getParameter("txt_descripcion"),request.getParameter("txt_imagen"),request.getParameter("txt_fecha_ingreso"),Integer.valueOf(request.getParameter("drop_marcas")),Integer.valueOf(request.getParameter("txt_existencia")),Double.valueOf(request.getParameter("txt_costo")),Double.valueOf(request.getParameter("txt_venta")),0);
+            producto= new Producto(request.getParameter("txt_producto"),request.getParameter("txt_descripcion"),request.getParameter("txt_imagen"),request.getParameter("txt_fecha_ingreso"),Integer.parseInt(request.getParameter("drop_marcas")),Integer.parseInt(request.getParameter("txt_existencia")),Double.parseDouble(request.getParameter("txt_costo")),Double.parseDouble(request.getParameter("txt_venta")),0);
             if("agregar_producto".equals(request.getParameter("btn_agregar_productos")))
             {
                 if (producto.agregar()>0)
@@ -63,7 +57,7 @@ public class controlador extends HttpServlet {
             //              MODIFICAR
             else if("modificar_producto".equals(request.getParameter("btn_modificar_productos")))
             {
-                int id=Integer.valueOf(request.getParameter("txt_id_producto"));
+                int id=Integer.parseInt(request.getParameter("txt_id_producto"));
                 if (producto.modificar()>0)
                 {
                     response.sendRedirect("index.jsp");
@@ -79,7 +73,7 @@ public class controlador extends HttpServlet {
             //              ELIMINAR
             else if("eliminar_producto".equals(request.getParameter("btn_eliminar_productos")))
             {
-                int id=Integer.valueOf(request.getParameter("txt_id_producto"));
+                int id=Integer.parseInt(request.getParameter("txt_id_producto"));
                 if (producto.eliminar()>0)
                 {
                     response.sendRedirect("index.jsp");
