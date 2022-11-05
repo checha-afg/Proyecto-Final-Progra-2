@@ -93,7 +93,7 @@ public class Producto2 {
             String query = "Select p.idproducto as id, p.producto, p.descripcion, p.precio_costo, p.existencia, m.marca, p.idmarca from productos as p INNER JOIN marcas as m on p.idmarca=m.idmarca ORDER BY idproducto;";
             cn.abrir_conexion();
             ResultSet consulta = cn.conexionBD.createStatement().executeQuery(query);
-            String encabezado[] = {"id", "producto", "descripcion", "precio_venta", "Existencias", "marca", "id_marca"};
+            String encabezado[] = {"id", "producto", "descripcion", "precio_venta", "existencias", "marca", "idmarca"};
             tabla.setColumnIdentifiers(encabezado);
             String datos[] = new String[8];
             while (consulta.next()) {
@@ -116,7 +116,7 @@ public class Producto2 {
 
     public Producto2 Listaid(int id) {
         Producto2 pro = new Producto2();
-        String sql = "select * from productos where idProducto=" + id;
+        String sql = "select * from productos where idproducto=" + id;
         try {
             cn.abrir_conexion();
             con = cn.conexionBD;
@@ -135,7 +135,7 @@ public class Producto2 {
     }
   public Producto2 Listaid2(int id) {
         Producto2 pro = new Producto2();
-        String sql = "select * from productos where idProducto=" + id;
+        String sql = "select * from productos where idproducto=" + id;
         try {
             cn.abrir_conexion();
             con = cn.conexionBD;
@@ -154,7 +154,7 @@ public class Producto2 {
     }
 
     public int modificar_existencia(int id, int exis) throws SQLException {
-        String sql = "update productos set Existencia=? where idProducto=?";
+        String sql = "update productos set existencia=? where idproducto=?";
 
         cn.abrir_conexion();
         con = cn.conexionBD;
@@ -166,7 +166,7 @@ public class Producto2 {
     }
 
     public int modificar_pVenta(int id, double nuevo_precio) throws SQLException {
-        String sql = "update productos set Precio_venta=? where idProducto=?;";
+        String sql = "update productos set precio_venta=? where idproducto=?;";
 
         cn.abrir_conexion();
         con = cn.conexionBD;
@@ -179,7 +179,7 @@ public class Producto2 {
 
     public Producto2 buscar(int id) {
         Producto2 pr = new Producto2();
-        String sql = "select * from productos where idProducto=" + id;
+        String sql = "select * from productos where idproducto=" + id;
         try {
             cn.abrir_conexion();
             con = cn.conexionBD;
@@ -201,7 +201,7 @@ public class Producto2 {
         HashMap<String, String> drop = new HashMap();
         try {
             cn = new Conexion();
-            String query = ("select idProducto as id, Producto,Precio_venta  from productos;");
+            String query = ("select idproducto as id, Producto,Precio_venta  from productos;");
             cn.abrir_conexion();
             ResultSet consulta = cn.conexionBD.createStatement().executeQuery(query);
             while (consulta.next()) {

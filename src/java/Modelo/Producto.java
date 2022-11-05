@@ -126,7 +126,7 @@ public class Producto {
     
     public Producto Listaid(int id) {
         Producto pro = new Producto();
-        String sql = "select * from productos where idProducto=" + id;
+        String sql = "select * from productos where idproducto=" + id;
         try {
             cn.abrir_conexion();
             con = cn.conexionBD;
@@ -145,7 +145,7 @@ public class Producto {
     }
     
     public int modificar_pVenta(int id, double nuevo_precio) {
-        String sql = "update productos set Precio_venta=? where idProducto=?;";
+        String sql = "update productos set precio_venta=? where idproducto=?;";
 
         try {
             cn.abrir_conexion();
@@ -217,7 +217,7 @@ public class Producto {
         try
         {
             PreparedStatement parametro;
-            String codigo_sql="delete from db_punto_venta.productos where idproducto=?";
+            String codigo_sql="delete from db_proyectofinal.productos where idproducto=?";
             cn = new Conexion();
             cn.abrir_conexion();
             parametro=(PreparedStatement) cn.conexionBD.prepareStatement(codigo_sql);
@@ -240,7 +240,7 @@ public class Producto {
             try {
                 String fecha = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime());
                 PreparedStatement parametro;
-                String codigo_sql = "update productos set Producto=?,idMarca=?,Descripcion=?,Precio_costo=?,Precio_venta=?,Existencia=?, Fecha_ingreso=?  where idProducto=?;";
+                String codigo_sql = "update productos set producto=?,idmarca=?,descripcion=?,precio_costo=?,precio_venta=?,existencia=?, fecha_ingreso=?  where idProducto=?;";
                 cn = new Conexion();
                 cn.abrir_conexion();
                 parametro = (PreparedStatement) cn.conexionBD.prepareStatement(codigo_sql);
@@ -273,7 +273,7 @@ public class Producto {
         {
             String fecha= new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime());
             PreparedStatement parametro;
-            String codigo_sql="Insert into db_punto_venta.productos (producto, descripcion, imagen, fecha_ingreso, idmarca, existencia, precio_costo, precio_venta) values (?,?,?,?,?,?,?,?)";
+            String codigo_sql="Insert into db_proyectofinal.productos (producto, descripcion, imagen, fecha_ingreso, idmarca, existencia, precio_costo, precio_venta) values (?,?,?,?,?,?,?,?)";
             cn = new Conexion();
             cn.abrir_conexion();
             parametro=(PreparedStatement) cn.conexionBD.prepareStatement(codigo_sql);
@@ -304,7 +304,7 @@ public class Producto {
             String query = "Select p.idproducto as id, p.producto, p.descripcion, p.imagen, p.precio_costo, p.precio_venta, p.existencia, p.fecha_ingreso, m.marca, p.idmarca,p.imagen from productos as p INNER JOIN marcas as m on p.idmarca=m.idmarca ORDER BY idproducto;";
             cn.abrir_conexion();
             ResultSet consulta = cn.conexionBD.createStatement().executeQuery(query);
-            String encabezado[] = {"id", "producto", "descripcion", "Imagen", "precio_costo", "precio_venta", "Existencias", "Fecha ingreso", "marca", "id_marca", "img"};
+            String encabezado[] = {"id", "producto", "descripcion", "imagen", "precio_costo", "precio_venta", "existencias", "fecha ingreso", "marca", "idmarca", "img"};
             tabla.setColumnIdentifiers(encabezado);
             String datos[] = new String[11];
             while (consulta.next()) {
@@ -336,7 +336,7 @@ public class Producto {
             String query = "Select p.idproducto as id, p.producto, p.descripcion, p.precio_costo, p.existencia, m.marca, p.idmarca from productos as p INNER JOIN marcas as m on p.idmarca=m.idmarca ORDER BY idproducto;";
             cn.abrir_conexion();
             ResultSet consulta = cn.conexionBD.createStatement().executeQuery(query);
-            String encabezado[] = {"id", "producto", "descripcion", "precio_venta", "Existencias", "marca", "id_marca"};
+            String encabezado[] = {"id", "producto", "descripcion", "precio_venta", "existencias", "marca", "idmarca"};
             tabla.setColumnIdentifiers(encabezado);
             String datos[] = new String[8];
             while (consulta.next()) {
@@ -361,7 +361,7 @@ public class Producto {
         HashMap<String, String> drop = new HashMap();
         try {
             cn = new Conexion();
-            String query = ("select idProducto as id, Producto,Precio_venta  from productos;");
+            String query = ("select idproducto as id, Producto,Precio_venta  from productos;");
             cn.abrir_conexion();
             ResultSet consulta = cn.conexionBD.createStatement().executeQuery(query);
             while (consulta.next()) {

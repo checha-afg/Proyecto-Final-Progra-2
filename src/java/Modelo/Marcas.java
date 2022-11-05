@@ -77,7 +77,7 @@ public class Marcas {
         try
         {
             PreparedStatement parametro;
-            String codigo_sql="delete from db_punto_venta.marcas  where idmarca=?";
+            String codigo_sql="delete from db_proyectofinal.marcas  where idmarca=?";
             cn = new Conexion();
             cn.abrir_conexion();
             parametro=(PreparedStatement) cn.conexionBD.prepareStatement(codigo_sql);
@@ -100,7 +100,7 @@ public class Marcas {
         try
         {
             PreparedStatement parametro;
-            String codigo_sql="update db_punto_venta.marcas set marca=? where idmarca=?";
+            String codigo_sql="update db_proyectofinal.marcas set marca=? where idmarca=?";
             cn = new Conexion();
             cn.abrir_conexion();
             parametro=(PreparedStatement) cn.conexionBD.prepareStatement(codigo_sql);
@@ -124,7 +124,7 @@ public class Marcas {
         try
         {
             PreparedStatement parametro;
-            String codigo_sql="Insert into db_punto_venta.marcas (marca) values (?)";
+            String codigo_sql="Insert into db_proyectofinal.marcas (marca) values (?)";
             cn = new Conexion();
             cn.abrir_conexion();
             parametro=(PreparedStatement) cn.conexionBD.prepareStatement(codigo_sql);
