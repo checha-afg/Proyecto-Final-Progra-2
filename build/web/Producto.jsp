@@ -22,7 +22,7 @@
         <div class="container">
             <form action="controlador" method="post" class="form-group" >
                 <h1>Formulario de Productos</h1>
-                <label form="lbl_id">ID del Producto</label>
+                <label for="lbl_id">ID del Producto</label>
                 <input type="text" name="txt_id_producto" id="txt_id_producto" class="form-control" value="0" readonly="">
                 
                 <div class="row">

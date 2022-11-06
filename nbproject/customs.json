@@ -3,5 +3,7 @@
         "img": {},
         "li": {}
     },
-    "attributes": {}
+    "attributes": {
+        "form": {}
+    }
 }
