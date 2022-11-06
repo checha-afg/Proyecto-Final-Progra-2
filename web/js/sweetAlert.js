@@ -3,7 +3,7 @@
 function bienvenido(){
 Swal.fire({
     title: "Bienvenido",
-    imageUrl: 'C:\Users\chech\OneDrive\Escritorio\Proyecto Final Progra2\web\Imagenes\hola.gif',
+    imageUrl: 'Imagenes/exito.gif',
     imageWidth: 250,
     imageHeight: 250,
     imageAlt: 'Bienvenido',
@@ -35,7 +35,7 @@ function creado(){
 Swal.fire({
     title: "Exito",
     text: 'Usuario creado correctamente',
-    imageUrl: 'Imagenes/registrado.gif',
+    imageUrl: 'Imagenes/exito2.gif',
     imageWidth: 496,
     imageHeight: 278,
     imageAlt: 'Registrado',
@@ -61,7 +61,7 @@ function error(){
     Swal.fire({
     title: "Error...",
     text: 'Al parecer algo ha salido mal',
-    imageUrl: 'Imagenes/fallo.gif',
+    imageUrl: 'Imagenes/error.gif',
     imageWidth: 498,
     imageHeight: 280,
     imageAlt: 'Error',
